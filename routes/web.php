@@ -41,3 +41,10 @@ Route::get('/test_get', function (\Illuminate\Http\Request $request) {
     }
     return response()->json(['status' => 'result', 'entity' => $entity]);
 });
+
+
+Route::get('/test_all', function (\Illuminate\Http\Request $request) {
+    $entities = \App\Test::all();
+
+    return response()->json(['status' => 'result', 'entity' => $entities]);
+});
